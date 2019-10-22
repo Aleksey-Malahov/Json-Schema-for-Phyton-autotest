@@ -1,0 +1,81 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "id",
+    "countryCode",
+    "name",
+    "currencies",
+    "subway",
+    "_links"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer",
+      "title": "The Id Schema",
+      "default": 0,
+      "examples": [
+        289
+      ]
+    },
+    "countryCode": {
+      "$id": "#/properties/countryCode",
+      "type": "string",
+      "title": "The Countrycode Schema",
+      "default": "",
+      "examples": [
+        "RUS"
+      ],
+      "pattern": "AUS|AUT|AZE|ALB|DZA|AIA|AGO|AND|ATA|ATG|ANT|ARG|ARM|ABW|AFG|BHS|BGD|BB|BHR|BLR|BLZ|BEL|BEN|BMU|BVT|BGR|BOL|BIH|BWA|BRA|BRN|BFA|BDI|BTN|VUT|VAT|GBR|HUN|VEN|VGB|VIR|ASM|TMP|VNM|GAB|HTI|GUY|GMB|GHA|GLP|GTM|GIN|GNB|DEU|GIB|HND|HKG|GRD|GRL|GRC|GEO|GUM|DNK|COD|DJI|DMA|DOM|EGY|ZMB|ESH|ZWE|ISR|IND|IDN|JOR|IRQ|IRN|IRL|ISL|ESP|ITA|YEM|CPV|KAZ|CYM|KHM|CMR|CAN|QAT|KEN|CYP|KGZ|KIR|CHN|CCK|COL|COM|COG|CRI|CIV|CUB|KWT|COK|LAO|LVA|LSO|LBR|LBN|LBY|LTU|LIE|LUX|MUS|MRT|MDG|MYT|MAC|MKD|MWI|MYS|MLI|MDV|MLT|MAR|MTQ|MHL|MEX|FSM|MOZ|MDA|MCO|MNG|MSR|MMR|NAM|NRU|NPL|NER|NGA|NLD|NIC|NIU|NZL|NCL|NOR|NFK|ARE|OMN|PAK|PLW|PSE|PAN|PNG|PRY|PER|PCN|POL|PRT|PRI|REU|CXR|RUS|RWA|ROM|SLV|WSM|SMR|STP|SAU|SWZ|SJM|SHN|PRK|MNP|SYC|VCT|SPM|SEN|KNA|LCA|SGP|SYR|SVK|SVN|USA|SLB|SOM|SDN|SUR|SLE|TJK|THA|TWN|TZA|TCA|TGO|TKL|TON|TTO|TUV|TUN|TKM|TUR|UGA|UZB|UKR|WLF|URY|FRO|FJI|PHL|FIN|FLK|FRA|GUF|PYF|HMD|HRV|CAF|TCD|CZE|CHL|CHE|SWE|LKA|ECU|GNQ|ERI|EST|ETH|YUG|ZAF|SGS|KOR|JAM|JPN|ATF|IOT|UMI"
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The Name Schema",
+      "default": "",
+      "examples": [
+        "������"
+      ],
+      "pattern": "������|�������|������-��-����|�����������|������|���������|�������|����������|�������|���������|�����|������|����������|���|������������|���������|���������|���������|������|����|�����������|����|�����-���������|�����|���������|���������� �����|���������|������|�����������|������������|����-������|���������|�����|����������|�����|�����|���������|������������|�������-����������|����|�������� �� ������|�����������|������������|������� ����|������� �����|��������|�����������|������|�������|�������"
+    },
+    "currencies": {
+      "$id": "#/properties/currencies",
+      "type": "array",
+      "title": "The Currencies Schema"
+    },
+    "subway": {
+      "$id": "#/properties/subway",
+      "type": "boolean",
+      "title": "The Subway Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "_links": {
+      "$id": "#/properties/_links",
+      "type": "object",
+      "title": "The _links Schema",
+      "required": [
+        "self"
+      ],
+      "properties": {
+        "self": {
+          "$id": "#/properties/_links/properties/self",
+          "type": "string",
+          "title": "The Self Schema",
+          "default": "",
+          "examples": [
+            "/api/v1/countries/RUS/regions/289"
+          ],
+          "pattern": "\\/api\\/v1\\/countries\\/RUS\\/regions\\/16|49|143|147|148|149|150|153|154|221|223|224|225|226|227|228|254|256|257|267|268|269|270|271|282|287|288|289|290|292|321|324|345|406|408|439|442|463|477|629|637|639|643|647|649|674|676|677|678|687",
+          "format": "regex"
+        }
+      }
+    }
+  }
+}
